@@ -36,7 +36,7 @@ function calculateTotalHours (employeesName) {
     return (`${totalHours}`)
 }   
 
-console.log(calculateTotalHours[1].name)
+console.log(calculateTotalHours (`john`))
 
 //Task 
 let yuh 
