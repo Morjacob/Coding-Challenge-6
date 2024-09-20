@@ -11,11 +11,20 @@ const employees = [
 
 // Task 2- Create a Function to Display Employee Shift Details
 
-function displayEmployeeShifts (employees) {
-    console.log(`Employee: ${employees.name}`)
+// Task 2- Create a Function to Display Employee Shift Details
+function displayEmployeeShifts(employees) {
+    if (employees && employees.length > 0) { // Check if employees exists and has elements
+      for (let i = 0; i < employees.length; i++) {
+        console.log(`Employee: ${employees[i].name}`);
+      }
+    } else {
+      console.log("No employees found.");
     }
-
-    employees.name[1]
+  }
+  
+  // Call the function with your employee data
+  displayEmployeeShifts(employees);
+  
 
 // Task 3- Create a Function to Assign a New Shift
 
