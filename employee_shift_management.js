@@ -90,12 +90,12 @@ function listAvailableEmployees (day) {
   for (const employee of employees) {
     const shiftAvailable = employee.shifts.some(shift => shift.day === day);
     if (!shiftAvailable) { 
-      Employees.push(employee); 
+      employees.push(employee); 
     }
   }
-  if (availableEmployees.length > 0) {
+  if (employees.length > 0) {
     console.log(`Employees not available on ${day}:`);
-    availableEmployees.forEach(employee => console.log(employee.name));
+    employees.forEach(employee => console.log(employee.name));
 } else {
     console.log(`All employees are available on ${day}.`);
   }
