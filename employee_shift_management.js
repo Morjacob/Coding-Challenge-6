@@ -20,13 +20,10 @@ function displayEmployeeShifts(employees) {
      if (employee.shifts.length > 0 ) {
       employee.shifts.forEach (shift => {
         console.log (`day: ${shift.day}, hours: ${shift.hours}`);
-      })
-     }
-      }
-    } else {
+    }); }} else {
       console.log("No employees found.");
     }
-  
+}
   
   // Call the function with your employee data
   displayEmployeeShifts(employees);
