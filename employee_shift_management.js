@@ -73,8 +73,9 @@ function calculateTotalHours(employeesName) {
     }
 }
 
-console.log(calculateTotalHours(`John`, `${employee.name} worked for ${overallHours} hours.`));
-
+const employeeName = "John";
+const totalHours = calculateTotalHours(employeeName);
+console.log(`${employeeName} worked for ${totalHours} hours.`); 
 
 
 //Task 5- Create a Function to List Employees with Free Days
