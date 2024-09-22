@@ -73,7 +73,7 @@ function calculateTotalHours(employeesName) {
     }
 }
 
-console.log(calculateTotalHours(`John`));
+console.log(calculateTotalHours(`John`, `${employee.name} worked for ${overallHours} hours.`));
 
 
 
