@@ -53,6 +53,9 @@ function assignShift(employeesName, days, hours) {
 // Example usage:
 assignShift("Sara", "Friday", 5);
 
+
+
+
 // Task 4- Create a Function to Calculate Total Hours Worked
 
 
@@ -66,11 +69,11 @@ function calculateTotalHours(employeesName) {
         }
         return overallHours;
     } else {
-        return 0; // Or handle the case where the employee is not found
+        return 0; 
     }
 }
 
-console.log(calculateTotalHours(`john`));
+console.log(calculateTotalHours(`John`));
 
 
 
