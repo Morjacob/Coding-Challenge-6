@@ -92,13 +92,8 @@ function listAvailableEmployees (day) {
       availableEmployees.push(employee); 
     }
   }
-
-  if (availableEmployees.length > 0) {
-    console.log(`Available employees on ${day}:`);
-    availableEmployees.forEach(employee => console.log(employee.name));
-  } else {
-    console.log(`No employees available on ${day}.`);
+ return console.log(`No employees available on ${day}.`);
   }
-}
+
 
 listAvailableEmployees(`Friday`);
