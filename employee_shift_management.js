@@ -88,7 +88,7 @@ function listAvailableEmployees (day) {
   const availableEmployees = [];
   for (const employee of employees) {
     const shiftAvailable = employee.shifts.some(shift => shift.day === day);
-    if (shiftAvailable && employee.availableDays.includes(day)) { 
+    if (!shiftAvailable) { 
       availableEmployees.push(employee); 
     }
   }
