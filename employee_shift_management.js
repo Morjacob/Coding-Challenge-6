@@ -90,7 +90,7 @@ function listAvailableEmployees (day) {
       availableEmployees.push(employee); // Add to availableEmployees if not scheduled
     }
   }
-  if (employees.length > 0) {
+  if (availableEmployees.length > 0) {
     console.log(`Employees not available on ${day}:`);
     employees.forEach(employee => console.log(employee.name));
 } else {
