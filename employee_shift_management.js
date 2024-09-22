@@ -90,5 +90,5 @@ function listAvailableEmployees (day) {
   }
 }
 
-listAvailableEmployees(`Sarah`);
+listAvailableEmployees(`Friday`);
 
