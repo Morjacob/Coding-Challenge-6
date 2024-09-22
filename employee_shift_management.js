@@ -87,12 +87,6 @@ console.log(`${employeeName} worked for ${totalHours} hours.`);
 //Task 5- Create a Function to List Employees with Free Days
 
 function listAvailableEmployees (day) {
-  for (const employee of employees) {
-    const shiftAvailable = employee.shifts.some(shift => shift.day === day);
-    if (!shiftAvailable) { 
-      employees.push(employee); 
-    }
-  }
   if (employees.length > 0) {
     console.log(`Employees not available on ${day}:`);
     employees.forEach(employee => console.log(employee.name));
