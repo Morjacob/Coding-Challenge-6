@@ -21,12 +21,7 @@ function displayEmployeeShifts(employees) {
               });
           }
       });
-  }  if (availableEmployees.length > 0) {
-    console.log(`Employees not available on ${day}:`);
-    availableEmployees.forEach(employee => console.log(employee.name));
-      console.log("No employees found.");
-  }
-}
+    }}
 
 // Call the function with your employee data
 displayEmployeeShifts(employees);
