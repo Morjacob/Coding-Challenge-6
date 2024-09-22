@@ -90,7 +90,7 @@ function listAvailableEmployees (day) {
   for (const employee of employees) {
     const shiftAvailable = employee.shifts.some(shift => shift.day === day);
     if (!shiftAvailable) { 
-      availableEmployees.push(employee); 
+      Employees.push(employee); 
     }
   }
   if (availableEmployees.length > 0) {
