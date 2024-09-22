@@ -56,6 +56,7 @@ assignShift("Sara", "Friday", 5);
 
 
 
+
 // Task 4- Create a Function to Calculate Total Hours Worked
 
 
@@ -78,6 +79,9 @@ const totalHours = calculateTotalHours(employeeName);
 console.log(`${employeeName} worked for ${totalHours} hours.`); 
 
 
+
+
+
 //Task 5- Create a Function to List Employees with Free Days
 
 function listAvailableEmployees (day) {
@@ -89,3 +93,4 @@ function listAvailableEmployees (day) {
     }
 }
 
+listAvailableEmployees(`Friday`)
