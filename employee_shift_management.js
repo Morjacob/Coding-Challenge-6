@@ -10,23 +10,24 @@ const employees = [
 ];
 
 
-
 // Task 2- Create a Function to Display Employee Shift Details
 function displayEmployeeShifts(employees) {
-    if (employees && employees.length > 0) { // Check if employees exists and has elements
-     employees.forEach(employee => {
-      console.log(`employee: ${employee.name}`);
-     })
-     if (employee.shifts.length > 0 ) {
-      employee.shifts.forEach (shift => {
-        console.log (`day: ${shift.day}, hours: ${shift.hours}`);
-    }); }} else {
+  if (employees && employees.length > 0) { // Check if employees exists and has elements
+      employees.forEach(employee => {
+          console.log(`employee: ${employee.name}`);
+          if (employee.shifts && employee.shifts.length > 0) { // Check if shifts exists and has elements
+              employee.shifts.forEach(shift => {
+                  console.log(`day: ${shift.day}, hours: ${shift.hours}`);
+              });
+          }
+      });
+  } else {
       console.log("No employees found.");
-    }
+  }
 }
-  
-  // Call the function with your employee data
-  displayEmployeeShifts(employees);
+
+// Call the function with your employee data
+displayEmployeeShifts(employees);
   
 
 // Task 3- Create a Function to Assign a New Shift
