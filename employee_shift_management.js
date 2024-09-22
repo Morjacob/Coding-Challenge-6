@@ -21,7 +21,9 @@ function displayEmployeeShifts(employees) {
               });
           }
       });
-  } else {
+  }  if (availableEmployees.length > 0) {
+    console.log(`Employees not available on ${day}:`);
+    availableEmployees.forEach(employee => console.log(employee.name));
       console.log("No employees found.");
   }
 }
@@ -92,8 +94,13 @@ function listAvailableEmployees (day) {
       availableEmployees.push(employee); 
     }
   }
- return console.log(`No employees available on ${day}.`);
+  if (availableEmployees.length > 0) {
+    console.log(`Employees not available on ${day}:`);
+    availableEmployees.forEach(employee => console.log(employee.name));
+} else {
+    console.log(`All employees are available on ${day}.`);
   }
-
+}
 
 listAvailableEmployees(`Friday`);
+
