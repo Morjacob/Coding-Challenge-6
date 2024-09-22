@@ -48,7 +48,7 @@ function assignShift(employeesName, days, hours) {
 }
 
 // Example usage:
-assignShift("Sara", "Friday", 5);
+assignShift("Sara", "Monday", 5);
 
 
 
@@ -95,12 +95,12 @@ function listAvailableEmployees(day) {
     console.log(`Employees with no shift on ${day}:`);
     availableEmployees.forEach(name => console.log(name)); // Log each available employee's name
   } else {
-    console.log(`All employees are assigned shifts on ${day}.`);
+    console.log(`Employees with shifts on ${day}.`);
   }
 }
 
-// Call the function with a valid day
-listAvailableEmployees('Friday');
+
+listAvailableEmployees('Friday'); 
 
 
  
