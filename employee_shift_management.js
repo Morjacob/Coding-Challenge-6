@@ -91,13 +91,14 @@ function listAvailableEmployees(day) {
     }
   }
 
+  // Log the results
   if (availableEmployees.length > 0) {
-    console.log(`Employees not available on ${day}:`);
+    console.log(`Employees not assigned a shift on ${day}:`);
     availableEmployees.forEach(employee => console.log(employee.name));
   } else {
-    console.log(`All employees are available on ${day}.`);
+    console.log(`All employees are assigned shifts on ${day}.`);
   }
 }
 
 // Call the function with a valid day
-listAvailableEmployees('Friday');
+listAvailableEmployees('Friday');  // Check for available employees on Friday
