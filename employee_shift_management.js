@@ -12,10 +12,10 @@ const employees = [
 
 // Task 2- Create a Function to Display Employee Shift Details
 function displayEmployeeShifts(employees) {
-  if (employees && employees.length > 0) { // Check if employees exists and has elements
+  if (employees && employees.length > 0) { // checks if employee name is in the array along with the details
       employees.forEach(employee => {
           console.log(`employee: ${employee.name}`);
-          if (employee.shifts && employee.shifts.length > 0) { // Check if shifts exists and has elements
+          if (employee.shifts && employee.shifts.length > 0) { // checks the shifts associated with the employee
               employee.shifts.forEach(shift => {
                   console.log(`day: ${shift.day}, hours: ${shift.hours}`);
               });
@@ -23,7 +23,8 @@ function displayEmployeeShifts(employees) {
       });
     }}
 
-// Call the function with your employee data
+  
+// will show the employee and shift details
 displayEmployeeShifts(employees);
   
 
@@ -32,9 +33,9 @@ displayEmployeeShifts(employees);
 
 // Task 3- Create a Function to Assign a New Shift
 function assignShift(employeesName, days, hours) {
-  const employee = employees.find(employee => employee.name === employeesName);
+  const employee = employees.find(employee => employee.name === employeesName); //Finds employee in array
   if (employee) {
-    // Check if the employee already has a shift on that day
+    // Check if employee is already assigned a shift
     const existingShift = employee.shifts.find(shift => shift.day === days);
     if (existingShift) {
       console.log(`Error: Shift already assigned for ${employee.name} on ${days}`);
@@ -47,7 +48,7 @@ function assignShift(employeesName, days, hours) {
   }
 }
 
-// Example usage:
+// Calls employee and assigns them a new shift
 assignShift("Sara", "Monday", 5);
 
 
@@ -55,15 +56,13 @@ assignShift("Sara", "Monday", 5);
 
 
 // Task 4- Create a Function to Calculate Total Hours Worked
-
-
 function calculateTotalHours(employeesName) {
     let overallHours = 0;
-    const employee = employees.find(employee => employee.name === employeesName);
+    const employee = employees.find(employee => employee.name === employeesName); // finds employee
 
     if (employee) {
         for (const shift of employee.shifts) {
-            overallHours += shift.hours;
+            overallHours += shift.hours; // calculates total hours
         }
         return overallHours;
     } else {
@@ -71,6 +70,7 @@ function calculateTotalHours(employeesName) {
     }
 }
 
+// example using John's data
 const employeeName = "John";
 const totalHours = calculateTotalHours(employeeName);
 console.log(`${employeeName} worked for ${totalHours} hours.`); 
@@ -82,24 +82,24 @@ console.log(`${employeeName} worked for ${totalHours} hours.`);
 //Task 5- Create a Function to List Employees with Free Days
 
 function listAvailableEmployees(day) {
-  const availableEmployees = []; 
+  const availableEmployees = []; // empty array for employees with free days
 
+// checks employees who do not work on a day of your choosing
   employees.forEach(employee => {
     if (!employee.shifts.some(shift => shift.day === day)) {
       availableEmployees.push(employee.name); 
     }
   });
-
  
   if (availableEmployees.length > 0) {
     console.log(`Employees with no shift on ${day}:`);
-    availableEmployees.forEach(name => console.log(name)); // Log each available employee's name
+    availableEmployees.forEach(name => console.log(name)); 
   } else {
     console.log(`Employees with shifts on ${day}.`);
   }
 }
 
-
+// Will log employees who do not work on friday
 listAvailableEmployees('Friday'); 
 
 
