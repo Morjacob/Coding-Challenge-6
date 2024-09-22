@@ -87,7 +87,7 @@ function listAvailableEmployees(day) {
 
   if (availableEmployees.length > 0) {
     console.log(`Employees not assigned a shift on ${day}:`);
-    availableEmployees.forEach(employee => console.log(employee.name));
+    availableEmployees.forEach(employee => console.log(name));
   } else {
     console.log(`All employees are assigned shifts on ${day}.`);
   }
