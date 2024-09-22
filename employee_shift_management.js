@@ -87,18 +87,18 @@ console.log(`${employeeName} worked for ${totalHours} hours.`);
 function listAvailableEmployees (day) {
   const availableEmployees = [];
   for (const employee of employees) {
-    const shiftAvailable = employee.shifts.some(shift => shift.day === day );
-    if (shiftAvailable) {
-      availableEmployees.push(employees)
+    const shiftAvailable = employee.shifts.some(shift => shift.day === day);
+    if (shiftAvailable && employee.availableDays.includes(day)) { 
+      availableEmployees.push(employee); 
     }
   }
-    const employeesAvailableOnDay = availableEmployees.filter(employee => employee.availableDays.includes(day));
-    if (employeesAvailableOnDay.length > 0) {
-        console.log(`Available employees on ${day}:`);
-        employeesAvailableOnDay.forEach(employee => console.log(employee.name));
-    } else {
-        console.log(`No employees available on ${day}.`);
-    }
+
+  if (availableEmployees.length > 0) {
+    console.log(`Available employees on ${day}:`);
+    availableEmployees.forEach(employee => console.log(employee.name));
+  } else {
+    console.log(`No employees available on ${day}.`);
+  }
 }
 
 listAvailableEmployees(`Friday`);
